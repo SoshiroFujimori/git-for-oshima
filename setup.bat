@@ -19,7 +19,9 @@ if not exist deps\PortableGit-2.47.0-64-bit.7z.exe (
 :: Extract Git to deps folder
 echo Extracting Git...
 cd deps
+if not exist git (
 7zr.exe x PortableGit-2.47.0-64-bit.7z.exe -o%cd%\git
+)
 
 :: Prompt user for name and email
 set /p gitName="Please enter your GitHub username: "
