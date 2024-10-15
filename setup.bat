@@ -23,9 +23,9 @@ set /p gitEmail="Please enter your GitHub email address: "
 
 :: Configure Git
 echo Configuring Git...
-cd git
-bin/git.exe config --global user.name "%gitName%"
-bin/git.exe config --global user.email "%gitEmail%"
+cd git/bin
+git.exe config --global user.name "%gitName%"
+git.exe config --global user.email "%gitEmail%"
 
 echo Process completed.
 
