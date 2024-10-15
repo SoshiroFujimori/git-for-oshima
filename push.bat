@@ -10,9 +10,9 @@ for /d %%d in (*) do (
     cd %%d
     if exist .git (
         echo Pushing repository %%d...
-        "../../dep/git/bin/git.exe" add .
-        "../../dep/git/bin/git.exe" commit -m "Automatic commit from push_all.bat"
-        "../../dep/git/bin/git.exe" push
+        "../../deps/git/bin/git.exe" add .
+        "../../deps/git/bin/git.exe" commit -m "Automatic commit from push_all.bat"
+        "../../deps/git/bin/git.exe" push
     ) else (
         echo %%d is not a Git repository.
     )

@@ -11,7 +11,7 @@ set /p repoUrl="Please enter the Git repository URL to clone: "
 cd repos
 
 :: Clone the repository
-"../dep/git/bin/git.exe" clone %repoUrl%
+"../deps/git/bin/git.exe" clone %repoUrl%
 
 :: Display a message when cloning is complete
 echo Repository clone completed.

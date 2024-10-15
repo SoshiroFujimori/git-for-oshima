@@ -3,13 +3,13 @@
 :: Log start of script
 echo Starting cleanup script...
 
-:: Delete dep folder
-echo Deleting dep folder...
-if exist dep (
-    rmdir /s /q dep
-    echo dep folder deleted.
+:: Delete deps folder
+echo Deleting deps folder...
+if exist deps (
+    rmdir /s /q deps
+    echo deps folder deleted.
 ) else (
-    echo dep folder does not exist.
+    echo deps folder does not exist.
 )
 
 :: Delete repos folder
