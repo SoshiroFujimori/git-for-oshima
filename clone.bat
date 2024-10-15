@@ -1,5 +1,5 @@
 @echo off
-call common.bat
+setlocal
 
 :: Create the destination folder (repos)
 if not exist repos mkdir repos
@@ -11,8 +11,10 @@ set /p repoUrl="Please enter the Git repository URL to clone: "
 cd repos
 
 :: Clone the repository
-"%GIT_DIR%\git.exe" clone %repoUrl%
+"../deps/git/bin/git.exe" clone %repoUrl%
 
 :: Display a message when cloning is complete
 echo Repository clone completed.
+
+endlocal
 pause

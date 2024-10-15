@@ -1,13 +1,12 @@
 @echo off
-call common.bat
 
 :: Log start of script
 echo Starting cleanup script...
 
 :: Delete deps folder
 echo Deleting deps folder...
-if exist %DEPS_DIR% (
-    rmdir /s /q %DEPS_DIR%
+if exist deps (
+    rmdir /s /q deps
     echo deps folder deleted.
 ) else (
     echo deps folder does not exist.
