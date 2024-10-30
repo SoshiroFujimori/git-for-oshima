@@ -1,7 +1,6 @@
 @echo off
 setlocal
 
-:loop
 :: Move to the repos folder
 cd repos
 
@@ -21,19 +20,7 @@ for /d %%d in (*) do (
     cd ..
 )
 
-cd ..
-
 echo All repositories have been synced.
-echo Waiting for 10 seconds...
-echo.
-echo --------------------------------
-echo.
-
-:: Wait for 10 seconds
-ping -n 10 127.0.0.1 >nul
-
-:: Repeat the loop
-goto loop
 
 endlocal
 pause
